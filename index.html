@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя ❤️</title>
+    <!-- Google Fonts для рукописного шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Стартовый экран (Overlay) для обхода блокировки аудио -->
+    <div id="start-overlay" class="overlay flex-center">
+        <div class="envelope">
+            <div class="heart-pulse">❤️</div>
+            <h1 class="welcome-text">У меня есть кое-что для тебя...</h1>
+            <button id="start-btn" class="btn-primary">Нажми, чтобы открыть</button>
+        </div>
+    </div>
+
+    <!-- Основной контент (скрыт до клика) -->
+    <main id="main-content" class="hidden">
+        <!-- Декоративные плавающие сердечки -->
+        <div class="floating-hearts-container" id="hearts-container"></div>
+
+        <!-- Заголовок открытки -->
+        <header class="card-header fade-in">
+            <h2 class="romantic-title">Love is.....</h2>
+            <p class="subtitle">Листай воспоминания...</p>
+        </header>
+
+        <!-- Контейнер слайд-шоу -->
+        <section class="slider fade-in object-delay-1">
+            <div class="slide" style="background-image: url('images/photo_1_2026-02-21_17-02-08.jpg');"></div>
+            <!-- Добавим запасные пустые слайды для инициализации -->
+            <div class="slide"></div>
+            <div class="slide"></div>
+
+            <div class="slider-controls">
+                <!-- Опционально кнопки (если надо ручное листание) -->
+                <!-- <button id="prevBtn" class="nav-btn">❮</button> -->
+                <!-- <button id="nextBtn" class="nav-btn">❯</button> -->
+
+                <!-- Точки индикации -->
+                <div class="dots-container" id="dots-container"></div>
+            </div>
+
+            <div class="photo-caption" id="photo-caption"></div>
+        </section>
+
+        <!-- Аудио плеер (скрытый) -->
+        <audio id="bg-music" loop preload="auto">
+            <source src="music/Песня для жены.mp3" type="audio/mpeg">
+        </audio>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
